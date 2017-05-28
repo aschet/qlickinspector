@@ -6,7 +6,7 @@ QlickInspector is a small embbedable library for widget based Qt applications wh
 
 ## Integration
 
-Use to following statements to integrate and activate QlickInspector into your application:
+Use to following statements to integrate QlickInspector into your application:
 
 ```cpp
 #include <QtWidgets/QApplication>
