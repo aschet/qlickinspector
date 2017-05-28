@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += widgets testlib
+QT       += core gui testlib
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = tests
 CONFIG   += console
@@ -20,9 +22,9 @@ DEFINES += SRCDIR=\\\"$$PWD/\\\"
 FORMS += \
     qlickinspectortestsui.ui
 
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../src/ -lsrc
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../src/ -lsrcd
-else:unix: LIBS += -L$$OUT_PWD/../src/ -lsrc
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../src/ -lqlickinspector
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../src/ -lqlickinspectord
+else:unix: LIBS += -L$$OUT_PWD/../src/ -lqlickinspector
 
 INCLUDEPATH += $$PWD/../src
 DEPENDPATH += $$PWD/../src
