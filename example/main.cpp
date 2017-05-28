@@ -6,7 +6,7 @@
 #include "mainwindow.h"
 #include <QtWidgets/QApplication>
 #include <QtCore/QDir>
-#include "qlickinspector.h"
+#include <qlickinspector.h>
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     QlickInspector inspector(qApp, QDir::homePath() + "/eventlog");
     inspector.setEnabled(true);
 
-    // NOTE: enable only for user which should be able to generate heatmap reports
+    // NOTE: enable only for users which should be able to generate heatmap reports
     inspector.setHotKeyEnabled(true);
 
     MainWindow w;

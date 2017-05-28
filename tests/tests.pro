@@ -6,7 +6,7 @@
 
 QT       += widgets testlib
 
-TARGET = tst_teststest
+TARGET = tests
 CONFIG   += console
 CONFIG   -= app_bundle
 

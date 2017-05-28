@@ -29,5 +29,5 @@ QColor QIColorMapping::map(unsigned int count) const
         hue -= 0.7 * (count / static_cast<double>(maxCount));
     }
 
-    return QColor::fromHsvF(hue, 1.0, 1.0, 0.3);
+    return QColor::fromHsvF(hue, 1.0, 1.0, 0.5);
 }

@@ -6,7 +6,7 @@
 
 QT       += widgets
 
-TARGET = src
+TARGET = qlickinspector
 TEMPLATE = lib
 
 DEFINES += QLICKINSPECTOR_LIBRARY
