@@ -11,8 +11,6 @@ Use to following statements to integrate and activate QlickInspector into your a
 ```cpp
 #include <QtWidgets/QApplication>
 #include <QtCore/QDir>
-#include <qlickinspector.h>#include <QtWidgets/QApplication>
-#include <QtCore/QDir>
 #include <qlickinspector.h>
 
 int main(int argc, char *argv[])
