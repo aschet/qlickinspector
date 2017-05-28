@@ -51,3 +51,5 @@ Furthermore all widgets in your application require a unique object name because
 ## Compiling
 
 TODO
+
+© 2017 Thomas Ascher
