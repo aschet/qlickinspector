@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     inspector.setHotKeyEnabled(true);
     // ...
     return a.exec();
-}wh
+}
 
 int main(int argc, char *argv[])
 {
@@ -38,10 +38,15 @@ int main(int argc, char *argv[])
 }
 ```
 
+Furthermore all widgets in your application require a unique object name because the object name of a widget, including all object names its parent widgets are used for id generation (e.g. dialog/groupBox/pushButton).
+
 ## Limitations
 
-- 
-- No server component, data is only stored locally on the client side.
+- Widgets require unique object names (in the current child context) for correct data acquisition.
+- The hotkey can only generate a report for the current window (e.g. no support for menu hierarchies).
+- Qt Quick is currently not supported (since I do not have experience in this area).
+- Only click based interactions are measured.
+- No server component, data is only stored and processed on the client side.
 
 ## Compiling
 
