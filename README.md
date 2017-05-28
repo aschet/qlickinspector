@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     QlickInspector inspector(qApp, QDir::homePath() + "/eventlog");
     inspector.setEnabled(true);
-    // NOTE: enable only for user which should be able to generate heatmap reports
+    // NOTE: enable only for users which should be able to generate heatmap reports
     inspector.setHotKeyEnabled(true);
     // ...
     return a.exec();
