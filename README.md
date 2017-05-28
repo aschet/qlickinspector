@@ -1,6 +1,6 @@
 # QlickInspector
 
-QlickInspector is a small embbedable library for widget based Qt applications which purpose is to help you to refine your UI. When embedded in your application QlickInspector records clicks by a user and is able to render element based heatmaps that visualize the click frequency on the specific elements. With the hotkey F12 a screenshot of the current window can be generated, which will be overlayed with the heatmap. 
+QlickInspector is a small embbedable library for widget based Qt applications which purpose is to help you to refine your UI. When embedded in your application, QlickInspector records clicks by a user and is able to render element based heatmaps that visualize the click frequency on the specific elements. With the hotkey F12 (when enabled) a screenshot of the current window can be generated, which will be overlayed with the heatmap. 
 
 ![Heatmap Example](https://cloud.githubusercontent.com/assets/13846346/26528919/1a6849c4-43b6-11e7-88fe-f5f6f40f512d.png)
 
