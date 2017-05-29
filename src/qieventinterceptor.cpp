@@ -60,7 +60,7 @@ bool QIEventInterceptor::eventFilter(QObject *watched, QEvent *event)
         return false;
     }
 
-    if (enabled && event->type() == QEvent::MouseButtonPress)
+    if (enabled && event->spontaneous() && event->type() == QEvent::MouseButtonPress)
     {
         counter->increment(static_cast<QWidget*>(watched));
     }
