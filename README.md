@@ -39,6 +39,19 @@ Furthermore all widgets in your application require a unique object name because
 
 ## Compiling
 
-TODO
+On Microsoft Windows open a Visual Stuido command prompt, ensure that qmake is in your PATH and that you have configured your QTDIR environment variable:
+
+```
+qmake
+nmake
+nmake install
+```
+On Unix based operating systems ensure that you have a build toolchain installed, qmake is in your PATH and that you have configured your QTDIR environment variable:
+
+```
+qmake
+make
+make install
+```
 
 © 2017 Thomas Ascher
