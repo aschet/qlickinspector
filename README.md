@@ -31,11 +31,11 @@ Furthermore all widgets in your application require a unique object name because
 
 - Widgets require unique object names (in the current child context) for correct data acquisition.
 - The hotkey can only generate a report for the current window (e.g. no support for menu hierarchies).
-- No recognition of menu items since the are not represented as widgets.
+- No recognition of menu items since they are not represented as widgets.
 - Qt Quick is currently not supported (since I do not have experience in this area).
 - Only click based interactions are measured.
 - No server component, data is only stored and processed on the client side.
-- Storage backend does not support unicode filenames on Microsoft Windows.
+- The storage backend does not support unicode filenames on Microsoft Windows.
 
 ## Compiling
 
