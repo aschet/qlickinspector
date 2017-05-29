@@ -22,8 +22,8 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     dialog.ui
 
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../src/ -lqlickinspector
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../src/ -lqlickinspectord
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../src/release -lqlickinspector
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../src/debug -lqlickinspectord
 else:unix: LIBS += -L$$OUT_PWD/../src/ -lqlickinspector
 
 INCLUDEPATH += $$PWD/../src

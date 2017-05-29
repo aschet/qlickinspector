@@ -4,7 +4,7 @@
  */
 
 #include "qiscreenshotgrabber.h"
-#include <QtWidgets/QWidget>
+#include "qiqtincludefix.h"
 #include <QtGui/QPixmap>
 
 QPixmap QIScreenshotGrabber::grab(QWidget* widget)

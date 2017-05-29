@@ -11,6 +11,10 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = qlickinspector
 TEMPLATE = lib
 
+ CONFIG(debug, debug|release) {
+     win32: TARGET = $$join(TARGET,,,d)
+ }
+
 DEFINES += QLICKINSPECTOR_LIBRARY
 
 SOURCES += \
@@ -38,7 +42,8 @@ HEADERS += \
     qimaxeventcountevaluator.h \
     qiheatmaprenderer.h \
     qicolormapping.h \
-    qlickinspector.h
+    qlickinspector.h \
+    qiqtincludefix.h
 
 unix {
     target.path = /usr/lib

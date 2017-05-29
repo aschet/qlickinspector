@@ -4,7 +4,7 @@
  */
 
 #include "qiwidgetidgenerator.h"
-#include <QtWidgets/QWidget>
+#include "qiqtincludefix.h"
 
 QString QIWidgetIDGenerator::generate(QWidget* widget)
 {

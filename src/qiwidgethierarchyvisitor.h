@@ -7,7 +7,7 @@
 #define QIWIDGETHIERARCHYVISITOR_H
 
 #include "qlickinspector_global.h"
-#include <QtWidgets/QWidget>
+class QWidget;
 
 class QLICKINSPECTOR_EXPORT QIWidgetHierarchyVisitor
 {
@@ -15,8 +15,6 @@ public:
     virtual ~QIWidgetHierarchyVisitor();
 
     virtual void visit(QWidget* widget);
-
-    static const QWidgetList getChildren(QWidget* widget);
 };
 
 #endif

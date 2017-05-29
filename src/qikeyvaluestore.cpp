@@ -24,6 +24,15 @@ struct QIKeyValueStorePrivate
         return str.toUtf8();
     }
 
+	QByteArray encodePath(const QString& str)
+	{
+#ifdef WIN32
+		return str.toLocal8Bit();
+#else
+		return str.toUtf8();
+#endif
+	}
+
     unqlite *db;
 };
 

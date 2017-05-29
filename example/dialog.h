@@ -6,7 +6,12 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
-#include <QtWidgets/QDialog>
+#include <QtCore/qglobal.h>
+#if (QT_VERSION >= 0x050000)
+    #include <QtWidgets/QDialog>
+#else
+    #include <QtGui/QDialog>
+#endif
 
 namespace Ui {
 class Dialog;

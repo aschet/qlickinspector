@@ -7,6 +7,7 @@
 #include "qiscreenshotgrabber.h"
 #include "qimaxeventcountevaluator.h"
 #include "qieventcounter.h"
+#include "qiqtincludefix.h"
 #include <QtGui/QPainter>
 
 QIHeatmapRenderer::QIHeatmapRenderer(std::shared_ptr<QIEventCounter> counterRef)

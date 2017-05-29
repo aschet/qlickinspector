@@ -90,7 +90,7 @@ private Q_SLOTS:
         auto counter = createCounter();
         QIEventInterceptor interceptor(counter);
         QlickInspectorTestsUI ui;
-        QMouseEvent mouseEvent(QEvent::MouseButtonPress, QPointF(), Qt::LeftButton,
+        QMouseEvent mouseEvent(QEvent::MouseButtonPress, QPoint(), Qt::LeftButton,
                                Qt::LeftButton, Qt::NoModifier);
 
         interceptor.setEnabled(true);

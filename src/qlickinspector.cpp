@@ -8,9 +8,9 @@
 #include "qieventcounter.h"
 #include "qieventinterceptor.h"
 #include "qiheatmaprenderer.h"
+#include "qiqtincludefix.h"
 #include <QtGui/QImage>
 #include <QtGui/QDesktopServices>
-#include <QtWidgets/QApplication>
 #include <memory>
 
 class QlickInspectorPrivate
@@ -26,7 +26,7 @@ public:
         }
 
         counter = std::make_shared<QIEventCounter>(store);
-        interceptor = std::make_unique<QIEventInterceptor>(counter);
+        interceptor.reset(new QIEventInterceptor(counter));
         app->installEventFilter(interceptor.get());
     }
 

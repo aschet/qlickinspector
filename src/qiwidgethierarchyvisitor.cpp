@@ -4,6 +4,7 @@
  */
 
 #include "qiwidgethierarchyvisitor.h"
+#include "qiqtincludefix.h"
 
 QIWidgetHierarchyVisitor::~QIWidgetHierarchyVisitor()
 {

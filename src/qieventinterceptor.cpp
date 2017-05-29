@@ -6,12 +6,10 @@
 #include "qieventinterceptor.h"
 #include "qieventcounter.h"
 #include "qiheatmaprenderer.h"
-#include <QtWidgets/QWidget>
 #include <QtCore/QEvent>
 #include <QtCore/QTimer>
 #include <QtGui/QKeyEvent>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QFileDialog>
+#include "qiqtincludefix.h"
 
 QIEventInterceptor::QIEventInterceptor(std::shared_ptr<QIEventCounter> counterRef)
     :counter(counterRef)
