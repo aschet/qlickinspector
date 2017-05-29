@@ -16,6 +16,10 @@ static QString getName(QWidget* widget)
         if (button)
             name = button->text();
     }
+    if (name.isEmpty())
+    {
+        name = widget->windowTitle();
+    }
 
     return name;
 }

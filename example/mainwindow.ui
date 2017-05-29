@@ -125,10 +125,14 @@
      <string>Menu</string>
     </property>
     <addaction name="actionEntry"/>
+    <addaction name="actionEntry_2"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Entries</string>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
