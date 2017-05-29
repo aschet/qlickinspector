@@ -9,8 +9,10 @@
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFileDialog>
+#include <QtWidgets/QAbstractButton>
 #else
 #include <QtGui/QWidget>
 #include <QtGui/QApplication>
 #include <QtGui/QFileDialog>
+#include <QtGui/QAbstractButton>
 #endif

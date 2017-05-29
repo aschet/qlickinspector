@@ -136,6 +136,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionEntry"/>
+   <addaction name="actionEntry_2"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionEntry">
@@ -144,6 +145,11 @@
    </property>
    <property name="toolTip">
     <string>Entry</string>
+   </property>
+  </action>
+  <action name="actionEntry_2">
+   <property name="text">
+    <string>Entry 2</string>
    </property>
   </action>
  </widget>
