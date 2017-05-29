@@ -30,7 +30,7 @@ Furthermore all widgets in your application require a unique object name because
 ## Limitations
 
 - Widgets require unique object names (in the current child context) for correct data acquisition.
-- The hotkey can only generate a report for the current window (e.g. no support for menu hierarchies).
+- The hotkey can only generate a report for the current window (no support for menu hierarchies).
 - No recognition of menu items since they are not represented as widgets.
 - Qt Quick is currently not supported (since I do not have experience in this area).
 - Only click based interactions are measured.
