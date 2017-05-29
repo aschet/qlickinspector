@@ -16,7 +16,7 @@ Use to following statements to integrate QlickInspector into your application:
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QlickInspector inspector(qApp, QDir::homePath() + "/eventlog");
+    QlickInspector inspector(&a, QDir::homePath() + "/eventlog");
     inspector.setEnabled(true);
     // NOTE: enable only for users which should be able to generate heatmap reports
     inspector.setHotKeyEnabled(true);
