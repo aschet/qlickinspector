@@ -17,8 +17,8 @@ CONFIG(debug, debug|release) {
 }
 
 win32 {
-    DESTDIR         = $$(QTDIR)/lib
-    DLLDESTDIR      = $$(QTDIR)/bin
+    DESTDIR         = $$[QT_INSTALL_LIBS]
+    DLLDESTDIR      = $$[QT_INSTALL_BINS]
 }
 
 DEFINES += QLICKINSPECTOR_LIBRARY
@@ -55,12 +55,12 @@ headers.files = \
     qlickinspector_global.h \
     qlickinspector.h
 
-headers.path = $$(QTDIR)/include
+headers.path = $$[QT_INSTALL_HEADERS]
 
 win32 {
-    target.path = $$(QTDIR)/bin
+    target.path = $$[QT_INSTALL_BINS]
 } else {
-    target.path = $$(QTDIR)/lib
+    target.path = $$[QT_INSTALL_LIBS]
 }
 
 INSTALLS += headers target
