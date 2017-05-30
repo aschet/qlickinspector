@@ -85,20 +85,6 @@ private Q_SLOTS:
         QCOMPARE(static_cast<unsigned int>(2), counter->get(id));
     }
 
-    void testEventInterception()
-    {
-        auto counter = createCounter();
-        QIEventInterceptor interceptor(counter);
-        QlickInspectorTestsUI ui;
-        QMouseEvent mouseEvent(QEvent::MouseButtonPress, QPoint(), Qt::LeftButton,
-                               Qt::LeftButton, Qt::NoModifier);
-
-        interceptor.setEnabled(true);
-        interceptor.eventFilter(&ui, &mouseEvent);
-
-        QCOMPARE(static_cast<unsigned int>(1), counter->get(&ui));
-    }
-
     void testMaxEventCountEvaluation()
     {
         auto counter = createCounter();

@@ -10,10 +10,14 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = qlickinspector
 TEMPLATE = lib
+VERSION = 1.0.0
 
- CONFIG(debug, debug|release) {
+CONFIG(debug, debug|release) {
      win32: TARGET = $$join(TARGET,,,d)
- }
+}
+
+DESTDIR         = $$(QTDIR)/lib
+DLLDESTDIR      = $$(QTDIR)/bin
 
 DEFINES += QLICKINSPECTOR_LIBRARY
 
@@ -45,7 +49,16 @@ HEADERS += \
     qlickinspector.h \
     qiqtincludefix.h
 
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
+headers.files = \
+    qlickinspector_global.h \
+    qlickinspector.h    
+
+headers.path = $$(QTDIR)/include
+
+win32 {
+    target.path = $$(QTDIR)/bin
+} else {
+    target.path = $$(QTDIR)/lib
 }
+
+INSTALLS += headers target
