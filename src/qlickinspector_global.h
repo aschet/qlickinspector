@@ -8,6 +8,8 @@
 
 #include <QtCore/qglobal.h>
 
+#define QLICKINSPECTOR_VERSION 0x01000
+
 #if defined(QLICKINSPECTOR_LIBRARY)
 #  define QLICKINSPECTOR_EXPORT Q_DECL_EXPORT
 #else
