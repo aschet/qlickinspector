@@ -10,7 +10,9 @@
 #include "qiqtincludefix.h"
 #include <QtGui/QPainter>
 
-QIHeatmapRenderer::QIHeatmapRenderer(std::shared_ptr<QIEventCounter> counterRef)
+using namespace std;
+
+QIHeatmapRenderer::QIHeatmapRenderer(shared_ptr<QIEventCounter> counterRef)
     :counter(counterRef)
 {
 
@@ -21,7 +23,7 @@ QIHeatmapRenderer::~QIHeatmapRenderer()
 
 }
 
-QPixmap QIHeatmapRenderer::render(QWidget *widget)
+QPixmap QIHeatmapRenderer::render(QWidget* widget)
 {
     topWidget = widget;
     colorMapping = QIColorMapping(QIMaxEventCountEvaluator(counter).getMaxCount(widget));
@@ -30,7 +32,7 @@ QPixmap QIHeatmapRenderer::render(QWidget *widget)
     return screenshot;
 }
 
-void QIHeatmapRenderer::visit(QWidget* widget)
+void QIHeatmapRenderer::visit(const QWidget* widget)
 {
     QIWidgetHierarchyVisitor::visit(widget);
 

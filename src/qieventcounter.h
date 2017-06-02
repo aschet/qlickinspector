@@ -18,11 +18,11 @@ public:
 
     ~QIEventCounter();
 
-    void increment(QWidget* widget);
+    void increment(const QWidget* widget);
 
     void increment(const QString& id);
 
-    unsigned int get(QWidget* widget) const;
+    unsigned int get(const QWidget* widget) const;
 
     unsigned int get(const QString& id) const;
 

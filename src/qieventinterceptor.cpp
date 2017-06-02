@@ -11,7 +11,9 @@
 #include <QtGui/QKeyEvent>
 #include "qiqtincludefix.h"
 
-QIEventInterceptor::QIEventInterceptor(std::shared_ptr<QIEventCounter> counterRef)
+using namespace std;
+
+QIEventInterceptor::QIEventInterceptor(shared_ptr<QIEventCounter> counterRef)
     :counter(counterRef)
     ,enabled(false)
     ,hotKeyEnabled(false)
@@ -44,7 +46,7 @@ bool QIEventInterceptor::isHotKeyEnabled() const
     return hotKeyEnabled;
 }
 
-bool QIEventInterceptor::eventFilter(QObject *watched, QEvent *event)
+bool QIEventInterceptor::eventFilter(QObject* watched, QEvent* event)
 {
     if (!watched->isWidgetType())
         return false;

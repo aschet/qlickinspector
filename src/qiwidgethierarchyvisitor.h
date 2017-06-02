@@ -14,7 +14,7 @@ class QLICKINSPECTOR_EXPORT QIWidgetHierarchyVisitor
 public:
     virtual ~QIWidgetHierarchyVisitor();
 
-    virtual void visit(QWidget* widget);
+    virtual void visit(const QWidget* widget);
 };
 
 #endif

@@ -11,15 +11,15 @@ QIWidgetHierarchyVisitor::~QIWidgetHierarchyVisitor()
 
 }
 
-void QIWidgetHierarchyVisitor::visit(QWidget* widget)
+void QIWidgetHierarchyVisitor::visit(const QWidget* widget)
 {
-    auto children = widget->children();
+    const QObjectList& children = widget->children();
 
-    for (auto it = children.begin(), endIt = children.end(); it != endIt; ++it)
+    for (QObjectList::const_iterator it = children.begin(), endIt = children.end(); it != endIt; ++it)
     {
         if ((*it)->isWidgetType())
         {
-            QWidget* child = static_cast<QWidget*>(*it);
+            const QWidget* child = static_cast<const QWidget*>(*it);
             if (child->isVisible())
                 visit(child);
         }

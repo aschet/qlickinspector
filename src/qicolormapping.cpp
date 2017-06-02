@@ -19,14 +19,15 @@ QIColorMapping::QIColorMapping(unsigned int maxCount)
 
 QColor QIColorMapping::map(unsigned int count) const
 {
-    double hue = 0.7;
+    const double MAX_HUE = 0.7;
+    double hue = MAX_HUE;
 
     if (maxCount > 0)
     {
         if (count > maxCount)
             count = maxCount;
 
-        hue -= 0.7 * (count / static_cast<double>(maxCount));
+        hue -= MAX_HUE * (count / static_cast<double>(maxCount));
     }
 
     return QColor::fromHsvF(hue, 1.0, 1.0, 0.5);

@@ -23,7 +23,7 @@ public:
     QPixmap render(QWidget* widget);
 
 private:
-    virtual void visit(QWidget* widget) override;
+    virtual void visit(const QWidget* widget) override;
 
     std::shared_ptr<QIEventCounter> counter;
 

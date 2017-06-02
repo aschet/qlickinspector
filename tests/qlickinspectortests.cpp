@@ -16,6 +16,8 @@
 #include <qicolormapping.h>
 #include <qiheatmaprenderer.h>
 
+using namespace std;
+
 class QlickInspectorTestsUI : public QWidget, public Ui::QlickInspectorTestsUI
 {
 public:
@@ -29,7 +31,7 @@ public:
 class QlickInspectorTests : public QObject
 {
     Q_OBJECT
-private Q_SLOTS:
+private slots:
     void testGrabbing()
     {
         QlickInspectorTestsUI ui;
@@ -125,14 +127,14 @@ private Q_SLOTS:
 private:
     std::shared_ptr<QIKeyValueStore> createStore() const
     {
-        auto store = std::make_shared<QIKeyValueStore>();
+        auto store = make_shared<QIKeyValueStore>();
         store->open();
         return store;
     }
 
     std::shared_ptr<QIEventCounter> createCounter() const
     {
-        return std::make_shared<QIEventCounter>(createStore());
+        return make_shared<QIEventCounter>(createStore());
     }
 };
 

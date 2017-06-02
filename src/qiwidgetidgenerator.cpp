@@ -6,13 +6,13 @@
 #include "qiwidgetidgenerator.h"
 #include "qiqtincludefix.h"
 
-static QString getName(QWidget* widget)
+static QString getName(const QWidget* widget)
 {
     QString name = widget->objectName();
     if (name.isEmpty())
     {
         // NOTE: workaround to handle actions in toolbars
-        QAbstractButton* button = dynamic_cast<QAbstractButton*>(widget);
+        const QAbstractButton* button = dynamic_cast<const QAbstractButton*>(widget);
         if (button)
             name = button->text();
     }
@@ -24,7 +24,7 @@ static QString getName(QWidget* widget)
     return name;
 }
 
-QString QIWidgetIDGenerator::generate(QWidget* widget)
+QString QIWidgetIDGenerator::generate(const QWidget* widget)
 {
     QWidget* parent = widget->parentWidget();
     if (parent)

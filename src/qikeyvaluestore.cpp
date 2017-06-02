@@ -47,7 +47,7 @@ QIKeyValueStore::~QIKeyValueStore()
     delete p;
 }
 
-bool QIKeyValueStore::open(const QString &path)
+bool QIKeyValueStore::open(const QString& path)
 {   
     close();
 

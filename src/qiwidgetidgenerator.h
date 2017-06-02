@@ -13,7 +13,7 @@ class QWidget;
 class QLICKINSPECTOR_EXPORT QIWidgetIDGenerator
 {
 public:
-    static QString generate(QWidget* widget);
+    static QString generate(const QWidget* widget);
 };
 
 #endif

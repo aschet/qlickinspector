@@ -6,7 +6,9 @@
 #include "qimaxeventcountevaluator.h"
 #include "qieventcounter.h"
 
-QIMaxEventCountEvaluator::QIMaxEventCountEvaluator(std::shared_ptr<QIEventCounter> counterRef)
+using namespace std;
+
+QIMaxEventCountEvaluator::QIMaxEventCountEvaluator(shared_ptr<QIEventCounter> counterRef)
     :counter(counterRef)
 {
 
@@ -17,14 +19,14 @@ QIMaxEventCountEvaluator::~QIMaxEventCountEvaluator()
 
 }
 
-unsigned int QIMaxEventCountEvaluator::getMaxCount(QWidget *widget)
+unsigned int QIMaxEventCountEvaluator::getMaxCount(QWidget* widget)
 {
     maxCount = 0;
     visit(widget);
     return maxCount;
 }
 
-void QIMaxEventCountEvaluator::visit(QWidget *widget)
+void QIMaxEventCountEvaluator::visit(const QWidget* widget)
 {
     unsigned int count = counter->get(widget);
     if (count > maxCount)

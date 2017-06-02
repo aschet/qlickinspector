@@ -10,22 +10,23 @@
 #include "qiheatmaprenderer.h"
 #include "qiqtincludefix.h"
 #include <QtGui/QImage>
-#include <QtGui/QDesktopServices>
 #include <memory>
+
+using namespace std;
 
 class QlickInspectorPrivate
 {
 public:
     QlickInspectorPrivate(QApplication* app, const QString& eventLogPath = QString())
     {
-        std::shared_ptr<QIKeyValueStore> store = std::make_shared<QIKeyValueStore>();
+        std::shared_ptr<QIKeyValueStore> store = make_shared<QIKeyValueStore>();
         if (!store->open(eventLogPath))
         {
             qWarning("Unable to open or create event log. Data will only be logged to memory.");
             store->open();
         }
 
-        counter = std::make_shared<QIEventCounter>(store);
+        counter = make_shared<QIEventCounter>(store);
         interceptor.reset(new QIEventInterceptor(counter));
         app->installEventFilter(interceptor.get());
     }

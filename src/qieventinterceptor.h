@@ -29,7 +29,7 @@ public:
 
     bool isHotKeyEnabled() const;
 
-    virtual bool eventFilter(QObject *watched, QEvent *event) override;
+    virtual bool eventFilter(QObject* watched, QEvent* event) override;
 
 private slots:
     void handleHotKey();
