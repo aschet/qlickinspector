@@ -52,7 +52,7 @@ private slots:
 
     void testKeyValueStoring()
     {
-        auto store = createStore();
+        shared_ptr<QIKeyValueStore> store = createStore();
         QString key = "test";
 
         bool exists = false;
@@ -78,7 +78,7 @@ private slots:
 
     void testEventCounting()
     {
-        auto counter = createCounter();
+        shared_ptr<QIEventCounter> counter = createCounter();
         QString id = "test";
 
         counter->increment(id);
@@ -89,7 +89,7 @@ private slots:
 
     void testMaxEventCountEvaluation()
     {
-        auto counter = createCounter();
+        shared_ptr<QIEventCounter> counter = createCounter();
         QlickInspectorTestsUI ui;
         ui.show();
         counter->increment(ui.pushButton);
@@ -111,7 +111,7 @@ private slots:
 
     void testHeatmapReandering()
     {
-        auto counter = createCounter();
+        shared_ptr<QIEventCounter> counter = createCounter();
         QlickInspectorTestsUI ui;
         ui.show();
         counter->increment(ui.pushButton);
@@ -125,14 +125,14 @@ private slots:
     }
 
 private:
-    std::shared_ptr<QIKeyValueStore> createStore() const
+    shared_ptr<QIKeyValueStore> createStore() const
     {
-        auto store = make_shared<QIKeyValueStore>();
+        shared_ptr<QIKeyValueStore> store = make_shared<QIKeyValueStore>();
         store->open();
         return store;
     }
 
-    std::shared_ptr<QIEventCounter> createCounter() const
+    shared_ptr<QIEventCounter> createCounter() const
     {
         return make_shared<QIEventCounter>(createStore());
     }
